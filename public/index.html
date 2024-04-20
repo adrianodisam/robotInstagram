@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/stilo.css">
+    <title>instabot</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="">
+        <!-- inicio Cabecalho -->
+        <div class="imagem">
+            <img src="./imagens/instabot_log.png ">
+        </div>
+
+    </header>
+    <div class="container-fluid m-4 ">
+
+
+        <div class="row ">
+            <div class="card-login  mt-1">
+                <!-- inicio explição-->
+                <div class="card ">
+
+                    <div id="textos" class="card-header">
+                        <h4>Como Usar o app</h4>
+
+                    </div>
+                    <div  class="card-body">
+
+
+                        <div>
+                            <div class="texto">
+                                <p>
+                                <h6>Instabot é um app de comentários automáticos
+                                    no instagram,ele abre uma nova página Obs(não interagir com essa nova página), para
+                                    ultiliza-lo é só seguir o passo a passo:</h6>
+                                </p>
+                            </div>
+                            <div class="texto">
+                                <p>Coloque email senha e url (endereço da página que deseja comentar) .</p>
+                            </div>
+                            <div class="texto">
+                                <p>Escreva o comentário que deseja e clique no
+                                    botão adicionar, pode copiar e colar dos exemplos também.</p>
+                            </div>
+                            <div class="texto">
+                                <p> Ao clicar no botão excluir irá excluir o último comentário adicionado.</p>
+                            </div>
+                            <div class="texto">
+                                <p>Adicione quantos comentários quizer o sistema escolhe de forma
+                                    aleatória entre os comentários adicionados .</p>
+                            </div>
+                            <div class="texto">
+                                <p>
+                                <h6>Quantidade de comentários:</h6>
+                                Coloque o número de comentários que deseja fazer consecutivamente .</p>
+                            </div>
+                            <div class="texto">
+                                <p>
+                                <h6>Tempo variado em segundos:</h6> É o tempo entre um comentário e outro.</p>
+                            </div>
+                            <div class="texto">
+                                <p>
+                                <h6>Pausa de Cometários:</h6>É o tempo que ele fica sem comentar para que não bloquei os
+                                comentários, depois desse tempo ele volta a comentar novamente .</p>
+                            </div>
+                            <div class="texto">
+                                <p>Ele ficará repetinho o processo até que seja fechado a página ou os comentários sejam
+                                    bloqueados .
+                                </p>
+                            </div>
+                            <div class="texto">
+                                <p>Caso o os comentários sejam bloqueados ele fecha a página e para de executar o app.
+                                </p>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-login  mt-1">
+
+                <div id="formulario" class="card ">
+
+                    <div id="login" class="card-header">
+                        <h3>Login</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label for="userEmail" class=" form-label  ">Email</label>
+                            <input type="email" name="email" class="form-control" id="userEmail"
+                                aria-describedby="emailHelp" placeholder="@Email , nome do usuario ou telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="userSenha" class=" form-label">Senha</label>
+                            <input type="password" name="senha" class="form-control" id="userSenha"
+                                placeholder="******">
+                        </div>
+                        <div class="form-group">
+                            <label for="userUrl" class=" form-label  ">Url</label>
+                            <input type="url" class="form-control" name="url" id="userUrl" aria-describedby="url"
+                                placeholder="http://exemplo.com/asdfgjhjkl/">
+                        </div>
+                        <div class="form-group">
+                            <label for="comentar" class=" form-label  ">Comentários</label>
+
+                            <input type="text" class="form-control mr-2" name="comentar" id="userComentar"
+                                aria-describedby="url" placeholder="exemplo :Eu quero">
+
+                            <button type="button" onclick="adicionar()" class="btn m-2 ">Adicionar</button>
+                            <button type="button" onclick="excluir()" class="btn  m-2">Excluir</button>
+                            <div id="res">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="number" class=" form-label  ">Quantidade de comentários</label>
+                            <input type="number" name="comentarios" class="form-control" id="userPausa"
+                                aria-describedby="quantidade" placeholder="50 comentários">
+                        </div>
+                        <div class="form-group">
+                            <label for="number" class=" form-label  ">Tempo variado em segundos</label>
+                            <input type="number" name="tempo" class="form-control" id="userTempo"
+                                aria-describedby="tempo em segundos" placeholder="60 segundos">
+                        </div>
+                        <div class="form-group">
+                            <label for="number" class=" form-label  ">Pausa de Cometários</label>
+                            <input type="number" name="pausa" class="form-control" id="userPausaComent"
+                                aria-describedby="tempo em minutos" placeholder="30 minutos">
+                        </div>
+                        <button onclick="newUser()" type=" submit" class=" btn  mt-2" value="">Entrar</button>
+
+                        <div id="res">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-login  mt-1">
+
+                <div class="card ">
+
+                    <div id="exemplos" class="card-header">
+                        <h4>Exemplos De Comentários</h4>
+
+                    </div>
+                    <div class="card-body">
+
+
+                        <div>
+                            <p>Eu quero
+                                ❤️ ❤🎮Eu quero ❤🎮 🙌 😅 😮 👏 🔥✅👽👽 🚀🔝 😛😜😝🦂🕸🕷🐉🐋🐲🐍🐸
+                                🌞 🍎 👼👼💜🖱🖥😎🔔🛐😳🥰🔥❤️🎉🎃😍🪀🤑🤗🎯😊👻😬🤍☘️🙏🍀🍁🍂🍃🌳🌵🌴</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./scripts/script.js "></script>
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js "
+        integrity=" sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p "
+        crossorigin=" anonymous "></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js "
+        integrity=" sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT "
+        crossorigin=" anonymous "></script>
+</body>
+
+</html>
